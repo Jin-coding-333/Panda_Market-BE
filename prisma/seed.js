@@ -33,7 +33,7 @@ async function main() {
   // // 기존 데이터 삭제
   // await prisma.product.deleteMany();
   // await prisma.article.deleteMany();
-  await prisma.comment.deleteMany(); // article(id) 데이터 삭제되면 comment 데이터 못 씀(유지하기). 
+  // await prisma.comment.deleteMany(); // article(id) 데이터 삭제되면 comment 데이터 못 씀(유지하기). 
   // 목 데이터 삽입
   // await prisma.product.createMany({
   //   data: PRODUCTS,
@@ -43,10 +43,10 @@ async function main() {
   //   data: ARTICLES,
   //   skipDuplicates: true,
   // });
-  await prisma.comment.createMany({
-    data: COMMENTS,
-    skipDuplicates: true,
-  });
+  // await prisma.comment.createMany({
+  //   data: COMMENTS,
+  //   skipDuplicates: true,
+  // });
 }
 
 main()
