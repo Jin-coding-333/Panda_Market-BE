@@ -1,5 +1,6 @@
 import * as dotenv from 'dotenv';
 dotenv.config();
+import cors from "cors";
 import express from "express";
 import { PrismaClient } from "@prisma/client";
 import { assert } from "superstruct";
@@ -22,6 +23,7 @@ const prisma = new PrismaClient();
 
 const app = express();
 app.use(express.json());
+app.use(cors({ origin: "*", credentials: true }));
 
 /** Products Routes **/
 
